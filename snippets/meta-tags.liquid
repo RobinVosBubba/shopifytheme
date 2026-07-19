@@ -1,0 +1,25 @@
+{%- comment -%}
+  Structured data for Google: LocalBusiness (hospitality) + basic OG tags.
+  Extend per-page (Product schema on product templates, Article on blog posts).
+{%- endcomment -%}
+
+<meta property="og:site_name" content="{{ shop.name }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page_title }}">
+{%- if page_description -%}
+  <meta property="og:description" content="{{ page_description | escape }}">
+{%- endif -%}
+<meta property="og:url" content="{{ canonical_url }}">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": {{ shop.name | json }},
+  "url": {{ shop.url | json }},
+  "image": {{ settings.logo | image_url: width: 600 | json }},
+  "servesCuisine": "Coffee, Modern Australian, Tropical",
+  "priceRange": "$$"
+}
+</script>

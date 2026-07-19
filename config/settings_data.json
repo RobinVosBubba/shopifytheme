@@ -1,0 +1,20 @@
+{
+  "current": {
+    "color_jungle_green": "#222A13",
+    "color_roast_brown": "#301C12",
+    "color_island_gold": "#EED483",
+    "color_faded_cream": "#FEF2C6",
+    "color_background": "#FEF2C6",
+    "color_text": "#222A13",
+    "color_accent": "#EED483",
+    "color_header_bg": "#222A13",
+    "color_footer_bg": "#301C12",
+    "font_heading": "raleway_n7",
+    "font_subheading": "raleway_n6",
+    "font_body": "raleway_n4",
+    "body_letter_spacing": 0.5,
+    "logo_width": 160,
+    "page_width": 1280,
+    "section_spacing": 60
+  }
+}

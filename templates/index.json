@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "heading": "Island life, one cup at a time",
+        "subheading": "Coffee, hospitality and the Koh Phangan way of living.",
+        "button_label": "Shop Coffee",
+        "button_url": "/collections/coffee"
+      }
+    }
+  },
+  "order": ["hero"]
+}

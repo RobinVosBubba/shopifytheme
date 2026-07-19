@@ -1,0 +1,163 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Bubbas Coffee",
+    "theme_author": "Built with Claude for Bubba's Coffee",
+    "theme_version": "0.1.0"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Brand Palette (Bubba's Brand Guidelines)"
+      },
+      {
+        "type": "color",
+        "id": "color_jungle_green",
+        "label": "Jungle Green (Primary Dark)",
+        "default": "#222A13"
+      },
+      {
+        "type": "color",
+        "id": "color_roast_brown",
+        "label": "Roast Brown (Secondary Dark)",
+        "default": "#301C12"
+      },
+      {
+        "type": "color",
+        "id": "color_island_gold",
+        "label": "Island Gold (Primary Light)",
+        "default": "#EED483"
+      },
+      {
+        "type": "color",
+        "id": "color_faded_cream",
+        "label": "Faded Cream (Secondary Light)",
+        "default": "#FEF2C6"
+      },
+      {
+        "type": "header",
+        "content": "Functional assignment"
+      },
+      {
+        "type": "color",
+        "id": "color_background",
+        "label": "Page background",
+        "default": "#FEF2C6"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Body text",
+        "default": "#222A13"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Accent / CTA",
+        "default": "#EED483"
+      },
+      {
+        "type": "color",
+        "id": "color_header_bg",
+        "label": "Header background",
+        "default": "#222A13"
+      },
+      {
+        "type": "color",
+        "id": "color_footer_bg",
+        "label": "Footer background",
+        "default": "#301C12"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Brand type system: Allora (logo/headings), Alosta (subheads/CTA), Raleway (body)"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_heading",
+        "label": "Heading font (fallback for Allora — upload Allora as a custom font file for exact brand match)",
+        "default": "raleway_n7"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_subheading",
+        "label": "Subheading / CTA font (fallback for Alosta)",
+        "default": "raleway_n6"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_body",
+        "label": "Body font (Raleway)",
+        "default": "raleway_n4"
+      },
+      {
+        "type": "range",
+        "id": "body_letter_spacing",
+        "label": "Body letter spacing (px)",
+        "min": 0,
+        "max": 4,
+        "step": 0.5,
+        "default": 0.5
+      }
+    ]
+  },
+  {
+    "name": "Logo",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Primary wordmark"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo_stacked",
+        "label": "Stacked logo (mobile)"
+      },
+      {
+        "type": "image_picker",
+        "id": "brand_motif",
+        "label": "Brand motif (tiger/wave mark)"
+      },
+      {
+        "type": "range",
+        "id": "logo_width",
+        "label": "Desktop logo width (px)",
+        "min": 80,
+        "max": 300,
+        "step": 10,
+        "default": 160
+      }
+    ]
+  },
+  {
+    "name": "Layout",
+    "settings": [
+      {
+        "type": "range",
+        "id": "page_width",
+        "label": "Max page width (px)",
+        "min": 1000,
+        "max": 1600,
+        "step": 20,
+        "default": 1280
+      },
+      {
+        "type": "range",
+        "id": "section_spacing",
+        "label": "Space between sections (px)",
+        "min": 0,
+        "max": 120,
+        "step": 4,
+        "default": 60
+      }
+    ]
+  }
+]

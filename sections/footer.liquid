@@ -1,0 +1,42 @@
+<footer class="site-footer">
+  <div class="page-width">
+    <div style="display:grid;gap:2rem;grid-template-columns:1fr;">
+      <div>
+        {%- if settings.brand_motif -%}
+          <img src="{{ settings.brand_motif | image_url: width: 80 }}" alt="" width="60" loading="lazy">
+        {%- endif -%}
+        <p>{{ section.settings.about_text }}</p>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <p>{{ section.settings.address }}</p>
+        <p>{{ section.settings.hours }}</p>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul style="list-style:none;padding:0;display:flex;gap:1rem;">
+          {%- if section.settings.instagram_url != blank -%}
+            <li><a href="{{ section.settings.instagram_url }}">Instagram</a></li>
+          {%- endif -%}
+          {%- if section.settings.facebook_url != blank -%}
+            <li><a href="{{ section.settings.facebook_url }}">Facebook</a></li>
+          {%- endif -%}
+        </ul>
+      </div>
+    </div>
+    <p style="opacity:0.6;font-size:0.75rem;margin-top:2rem;">&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}</p>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    { "type": "textarea", "id": "about_text", "label": "About text", "default": "A tropical hospitality brand inspired by the rhythm of island life." },
+    { "type": "text", "id": "address", "label": "Address" },
+    { "type": "text", "id": "hours", "label": "Hours", "default": "Open daily, 5pm–12am" },
+    { "type": "url", "id": "instagram_url", "label": "Instagram URL" },
+    { "type": "url", "id": "facebook_url", "label": "Facebook URL" }
+  ]
+}
+{% endschema %}
