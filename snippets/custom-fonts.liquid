@@ -1,27 +1,15 @@
 {%- comment -%}
-  Custom @font-face for Bubba's brand fonts (Allora, Alosta).
-  These are licensed display fonts, not available via Shopify's font_picker,
-  so they're loaded directly from theme assets instead of settings.font_heading.
-
-  DROP-IN STEP: upload the licensed web font files (woff2 preferred, woff as
-  fallback) to this theme's /assets folder named exactly:
-    allora.woff2 / allora.woff
-    alosta.woff2 / alosta.woff
-  via Shopify Admin → Edit code → Assets → Add a new asset (or push via GitHub).
-  Nothing else needs to change — the @font-face src below already points here,
-  and base.css already references var(--font-allora) / var(--font-alosta).
-  Until the files exist, these requests 404 silently and the Raleway fallback
-  in the font stack is used instead, so nothing breaks in the meantime.
+  Bubba's brand type system — all three fonts loaded from licensed files
+  in this theme's /assets, no dependency on Shopify's font_picker/font_face
+  system (which only works with Shopify-hosted font objects, not our own
+  uploaded files — that mismatch caused the earlier "font drop" Liquid error).
 {%- endcomment -%}
 
 <style>
   @font-face {
     font-family: 'Allora';
-    src:
-      {%- if 'allora.woff2' | asset_url -%}
-        url('{{ 'allora.woff2' | asset_url }}') format('woff2'),
-      {%- endif -%}
-      url('{{ 'allora.woff' | asset_url }}') format('woff');
+    src: url('{{ 'allora.woff2' | asset_url }}') format('woff2'),
+         url('{{ 'allora.woff' | asset_url }}') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -29,18 +17,25 @@
 
   @font-face {
     font-family: 'Alosta';
-    src:
-      {%- if 'alosta.woff2' | asset_url -%}
-        url('{{ 'alosta.woff2' | asset_url }}') format('woff2'),
-      {%- endif -%}
-      url('{{ 'alosta.woff' | asset_url }}') format('woff');
+    src: url('{{ 'alosta.woff2' | asset_url }}') format('woff2'),
+         url('{{ 'alosta.woff' | asset_url }}') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
 
+  @font-face {
+    font-family: 'Raleway';
+    src: url('{{ 'raleway.woff2' | asset_url }}') format('woff2-variations'),
+         url('{{ 'raleway.woff' | asset_url }}') format('woff');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
   :root {
-    --font-allora: 'Allora', {{ settings.font_heading.family }}, serif;
-    --font-alosta: 'Alosta', {{ settings.font_subheading.family }}, sans-serif;
+    --font-heading: 'Allora', Georgia, serif;
+    --font-subheading: 'Alosta', Helvetica, sans-serif;
+    --font-body: 'Raleway', Helvetica, sans-serif;
   }
 </style>

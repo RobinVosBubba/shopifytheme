@@ -37,18 +37,11 @@
       --color-accent: {{ settings.color_accent }};
       --color-header-bg: {{ settings.color_header_bg }};
       --color-footer-bg: {{ settings.color_footer_bg }};
-      --font-heading: {{ settings.font_heading.family }}, serif;
-      --font-subheading: {{ settings.font_subheading.family }}, sans-serif;
-      --font-body: {{ settings.font_body.family }}, sans-serif;
       --body-letter-spacing: {{ settings.body_letter_spacing }}px;
       --page-width: {{ settings.page_width }}px;
       --section-spacing: {{ settings.section_spacing }}px;
     }
   </style>
-
-  {{ settings.font_heading | font_face: font_display: 'swap' }}
-  {{ settings.font_subheading | font_face: font_display: 'swap' }}
-  {{ settings.font_body | font_face: font_display: 'swap' }}
 </head>
 <body>
   <a class="skip-to-content" href="#MainContent">Skip to content</a>

@@ -76,26 +76,8 @@
     "name": "Typography",
     "settings": [
       {
-        "type": "header",
-        "content": "Brand type system: Allora (logo/headings), Alosta (subheads/CTA), Raleway (body)"
-      },
-      {
-        "type": "font_picker",
-        "id": "font_heading",
-        "label": "Heading font (fallback for Allora — upload Allora as a custom font file for exact brand match)",
-        "default": "raleway_n7"
-      },
-      {
-        "type": "font_picker",
-        "id": "font_subheading",
-        "label": "Subheading / CTA font (fallback for Alosta)",
-        "default": "raleway_n6"
-      },
-      {
-        "type": "font_picker",
-        "id": "font_body",
-        "label": "Body font (Raleway)",
-        "default": "raleway_n4"
+        "type": "paragraph",
+        "content": "Brand type system is fixed to licensed fonts: Allora (logo/headings), Alosta (subheadings/CTA), Raleway (body). Font files live in /assets and are not editable here — see snippets/custom-fonts.liquid."
       },
       {
         "type": "range",

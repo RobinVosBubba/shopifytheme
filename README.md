@@ -17,11 +17,16 @@ INP < 200ms, CLS < 0.1).
 **Typography:** Allora (logo/headings), Alosta (subheadings/CTA),
 Raleway (body copy, wide tracking).
 
-**Font status: LIVE.** Licensed `Allora.otf` / `Alosta.otf` were
-converted to `woff2`/`woff` and added to `/assets`. Raleway is served
-via Shopify's built-in font picker (`config/settings_schema.json`),
-no separate file needed. `snippets/custom-fonts.liquid` declares the
-`@font-face` rules; `base.css` points headings/CTAs at them.
+**Font status: LIVE.** Licensed `Allora.otf`, `Alosta.otf`, and the
+`Raleway` variable font were converted to `woff2`/`woff` and added to
+`/assets`. All three are loaded via hand-written `@font-face` rules in
+`snippets/custom-fonts.liquid` — no dependency on Shopify's
+`font_picker`/`font_face` filter system, which only works with
+Shopify-hosted font objects, not our own uploaded files (that mismatch
+caused an earlier "font_face can only be used with a font drop"
+Liquid error). Typography settings in the Theme Editor are now just a
+note pointing here — fonts aren't editable per-store since they're
+your licensed brand assets, not swappable system fonts.
 
 All values live in `config/settings_schema.json` / `settings_data.json`
 so they're editable in the Theme Editor without touching code.
