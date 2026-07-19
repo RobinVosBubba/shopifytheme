@@ -1,0 +1,29 @@
+{%- comment -%}
+  Renders a single product card. Usage: {% render 'product-card', product: product %}
+{%- endcomment -%}
+
+<div class="product-card">
+  <a href="{{ product.url }}" class="product-card__link">
+    <div class="product-card__media">
+      {%- if product.featured_media -%}
+        <img
+          src="{{ product.featured_media | image_url: width: 600 }}"
+          alt="{{ product.featured_media.alt | escape }}"
+          width="600"
+          height="{{ 600 | divided_by: product.featured_media.aspect_ratio }}"
+          loading="lazy"
+        >
+      {%- else -%}
+        <div class="product-card__media--placeholder"></div>
+      {%- endif -%}
+    </div>
+    <h3 class="product-card__title">{{ product.title }}</h3>
+    <p class="product-card__price">
+      {%- if product.price_varies -%}
+        From {{ product.price_min | money }}
+      {%- else -%}
+        {{ product.price | money }}
+      {%- endif -%}
+    </p>
+  </a>
+</div>

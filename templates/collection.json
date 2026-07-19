@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "show_heading": true,
+        "columns_desktop": 3,
+        "products_per_page": 16
+      }
+    }
+  },
+  "order": ["main"]
+}
