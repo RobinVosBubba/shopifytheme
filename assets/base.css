@@ -21,14 +21,14 @@ body {
   font-size: 16px;
 }
 
-h1, h2, h3 {
-  font-family: var(--font-heading);
+h1, h2, h3, .site-header__logo, .brand-heading {
+  font-family: var(--font-allora, var(--font-heading));
   line-height: 1.1;
   margin: 0 0 0.5em;
 }
 
 h4, h5, h6, .cta, button, .button {
-  font-family: var(--font-subheading);
+  font-family: var(--font-alosta, var(--font-subheading));
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
